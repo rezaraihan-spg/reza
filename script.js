@@ -2,59 +2,67 @@
 const products = [
     {
         id: 1,
-        name: "Laptop Gaming",
-        price: 8500000,
-        description: "Laptop gaming dengan performa tinggi",
-        emoji: "💻"
+        name: "Vivo X100 Pro",
+        price: 12999000,
+        description: "Flagship dengan chip Snapdragon 8 Gen 3",
+        brand: "VIVO",
+        image: "https://via.placeholder.com/250x200?text=Vivo+X100+Pro"
     },
     {
         id: 2,
-        name: "Smartphone",
-        price: 4500000,
-        description: "Smartphone dengan kamera terbaik",
-        emoji: "📱"
+        name: "OPPO Find X7",
+        price: 11999000,
+        description: "Smartphone premium dengan kamera Hasselblad",
+        brand: "OPPO",
+        image: "https://via.placeholder.com/250x200?text=OPPO+Find+X7"
     },
     {
         id: 3,
-        name: "Headphone Wireless",
-        price: 1200000,
-        description: "Headphone nirkabel dengan bass mantap",
-        emoji: "🎧"
+        name: "Samsung Galaxy S24 Ultra",
+        price: 13999000,
+        description: "Flagship terbaru dengan AI dan kamera canggih",
+        brand: "SAMSUNG",
+        image: "https://via.placeholder.com/250x200?text=Samsung+Galaxy+S24"
     },
     {
         id: 4,
-        name: "Smartwatch",
-        price: 2000000,
-        description: "Jam tangan pintar untuk tracking kesehatan",
-        emoji: "⌚"
+        name: "Vivo V40 Pro",
+        price: 7999000,
+        description: "Mid-range dengan desain premium",
+        brand: "VIVO",
+        image: "https://via.placeholder.com/250x200?text=Vivo+V40+Pro"
     },
     {
         id: 5,
-        name: "Tablet",
-        price: 3500000,
-        description: "Tablet dengan layar besar",
-        emoji: "📲"
+        name: "OPPO A3 Pro",
+        price: 6499000,
+        description: "Budget-friendly dengan baterai tahan lama",
+        brand: "OPPO",
+        image: "https://via.placeholder.com/250x200?text=OPPO+A3+Pro"
     },
     {
         id: 6,
-        name: "Kamera Digital",
-        price: 5500000,
-        description: "Kamera profesional untuk fotografi",
-        emoji: "📷"
+        name: "Samsung Galaxy A55",
+        price: 5999000,
+        description: "Affordable dengan performa solid",
+        brand: "SAMSUNG",
+        image: "https://via.placeholder.com/250x200?text=Samsung+Galaxy+A55"
     },
     {
         id: 7,
-        name: "Keyboard Mekanik",
-        price: 800000,
-        description: "Keyboard gaming dengan RGB lighting",
-        emoji: "⌨️"
+        name: "Vivo Y200 5G",
+        price: 3999000,
+        description: "Entry-level dengan dukungan 5G",
+        brand: "VIVO",
+        image: "https://via.placeholder.com/250x200?text=Vivo+Y200+5G"
     },
     {
         id: 8,
-        name: "Mouse Gaming",
-        price: 600000,
-        description: "Mouse presisi tinggi untuk gaming",
-        emoji: "🖱️"
+        name: "OPPO Reno12 Pro",
+        price: 8999000,
+        description: "Mid-range dengan kamera 50MP OIS",
+        brand: "OPPO",
+        image: "https://via.placeholder.com/250x200?text=OPPO+Reno12+Pro"
     }
 ];
 
@@ -91,7 +99,10 @@ function loadProducts() {
         const productCard = document.createElement('div');
         productCard.className = 'product-card';
         productCard.innerHTML = `
-            <div class="product-image">${product.emoji}</div>
+            <div class="product-image">
+                <img src="${product.image}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="product-brand">${product.brand}</div>
+            </div>
             <div class="product-info">
                 <div class="product-name">${product.name}</div>
                 <div class="product-description">${product.description}</div>
@@ -137,7 +148,8 @@ function addToCart(productId) {
     } else {
         cart.push({
             id: product.id,
-            name: product.name,
+            brand: product.brand,
+            image: product.image
             price: product.price,
             quantity: quantity,
             emoji: product.emoji
@@ -171,8 +183,11 @@ function loadCartItems() {
     }
     
     container.innerHTML = '';
-    cart.forEach(item => {
-        const cartItem = document.createElement('div');
+    cart.forEach(style="width: 80px; height: 80px; flex-shrink: 0;">
+                <img src="${item.image}" alt="${item.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+            </div>
+            <div class="item-details">
+                <div class="item-name">${item.brandv');
         cartItem.className = 'cart-item';
         cartItem.innerHTML = `
             <div class="item-details">
@@ -239,10 +254,8 @@ function setupSearch() {
     searchInput.addEventListener('input', function() {
         const searchTerm = this.value.toLowerCase();
         const container = document.getElementById('products-container');
-        
-        const filteredProducts = products.filter(p => 
-            p.name.toLowerCase().includes(searchTerm) ||
-            p.description.toLowerCase().includes(searchTerm)
+         ||
+            p.brand.toLowerCase().includes(searchTerm)
         );
         
         container.innerHTML = '';
@@ -253,6 +266,12 @@ function setupSearch() {
         
         filteredProducts.forEach(product => {
             const productCard = document.createElement('div');
+            productCard.className = 'product-card';
+            productCard.innerHTML = `
+                <div class="product-image">
+                    <img src="${product.image}" alt="${product.name}" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="product-brand">${product.brand}</div>
+                ');
             productCard.className = 'product-card';
             productCard.innerHTML = `
                 <div class="product-image">${product.emoji}</div>
