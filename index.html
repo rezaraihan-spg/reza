@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Online - Belanja Sekarang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🛒 TokoOnline</h1>
+                </div>
+                <ul class="menu">
+                    <li><a href="index.html" class="active">Beranda</a></li>
+                    <li><a href="cart.html">Keranjang (<span id="cart-count">0</span>)</a></li>
+                    <li id="user-menu">
+                        <a href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Selamat Datang di Toko Online</h2>
+                <p>Temukan produk berkualitas dengan harga terjangkau</p>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="container">
+                <h2 class="section-title">Produk Kami</h2>
+                <div class="filters">
+                    <input type="text" id="search" placeholder="Cari produk..." class="search-box">
+                </div>
+                <div class="products-grid" id="products-container">
+                    <!-- Produk akan dimuat di sini -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 TokoOnline. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
