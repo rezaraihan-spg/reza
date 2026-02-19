@@ -1,0 +1,16 @@
+:root{--bg:#0f1720;--card:#0b1220;--accent:#ffcc00;--muted:#9aa4b2}
+*{box-sizing:border-box}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#071024, #081426);color:#e6eef6;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.wrap{width:100%;max-width:480px;background:rgba(255,255,255,0.03);padding:20px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6);}
+h1{margin:0 0 12px;font-size:20px;text-align:center}
+.status{display:flex;justify-content:space-between;gap:12px;margin-bottom:12px;font-weight:600;color:var(--muted)}
+.status button{background:transparent;border:1px solid rgba(255,255,255,0.06);color:inherit;padding:4px 8px;border-radius:6px;cursor:pointer}
+.reels{display:flex;gap:12px;justify-content:center;margin:8px 0 16px}
+.reel{width:120px;height:120px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));display:flex;align-items:center;justify-content:center;font-size:48px;box-shadow:inset 0 -6px 12px rgba(0,0,0,0.6)}
+.controls{display:flex;gap:10px;justify-content:center}
+button#spin{background:var(--accent);color:#081426;border:none;padding:10px 20px;border-radius:10px;font-weight:700;cursor:pointer}
+button#autoplay{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 14px;border-radius:8px;color:var(--muted);cursor:pointer}
+.message{margin-top:12px;text-align:center;font-weight:600;min-height:24px}
+.note{text-align:center;color:var(--muted);margin-top:8px;font-size:13px}
+
+@keyframes spinAnim{0%{transform:translateY(0)}100%{transform:translateY(-100%)}}
