@@ -1,56 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko Online - Belanja Sekarang</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Demo Slot — Simulasi</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <h1>🛒 TokoOnline</h1>
-                </div>
-                <ul class="menu">
-                    <li><a href="index.html" class="active">Beranda</a></li>
-                    <li><a href="cart.html">Keranjang (<span id="cart-count">0</span>)</a></li>
-                    <li id="user-menu">
-                        <a href="login.html">Login</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+  <div class="wrap">
+    <h1>Slot Simulator (Demo)</h1>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Selamat Datang di Toko Online</h2>
-                <p>Temukan produk berkualitas dengan harga terjangkau</p>
-            </div>
-        </section>
+    <div class="status">
+      <div>Credits: <span id="credits">100</span></div>
+      <div>Bet: <button id="bet-dec">-</button> <span id="bet">1</span> <button id="bet-inc">+</button></div>
+    </div>
 
-        <section class="products-section">
-            <div class="container">
-                <h2 class="section-title">Produk Kami</h2>
-                <div class="filters">
-                    <input type="text" id="search" placeholder="Cari produk..." class="search-box">
-                </div>
-                <div class="products-grid" id="products-container">
-                    <!-- Produk akan dimuat di sini -->
-                </div>
-            </div>
-        </section>
-    </main>
+    <div class="reels" id="reels">
+      <div class="reel" id="r1">🍒</div>
+      <div class="reel" id="r2">🍒</div>
+      <div class="reel" id="r3">🍒</div>
+    </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 TokoOnline. Semua hak dilindungi.</p>
-        </div>
-    </footer>
+    <div class="controls">
+      <button id="spin">SPIN</button>
+      <button id="autoplay">Auto</button>
+    </div>
 
-    <script src="script.js"></script>
+    <div id="message" class="message"></div>
+    <p class="note">Hanya demo — tidak ada uang nyata.</p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
